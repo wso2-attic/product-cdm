@@ -28,7 +28,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <name>WSO2 EMM - Integration Test UI Module</name>
-    <artifactId>org.wso2.carbon.cdm.integration.test.ui.integration</artifactId>
+    <artifactId>org.wso2.cdm.integration.test.ui.integration</artifactId>
     <packaging>jar</packaging>
 
     <build>
