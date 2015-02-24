@@ -23,7 +23,7 @@
     <groupId>org.wso2.cdm</groupId>
     <artifactId>wso2cdm-parent</artifactId>
     <packaging>pom</packaging>
-    <version>0.9.1</version>
+    <version>0.9.2-SNAPSHOT</version>
     <name>WSO2 CDM - Parent</name>
     <url>http://wso2.org</url>
     <description>WSO2 Connected Device Manager</description>
@@ -190,7 +190,7 @@
         <url>https://github.com/wso2/product-cdm.git</url>
         <developerConnection>scm:git:https://github.com/wso2/product-cdm.git</developerConnection>
         <connection>scm:git:https://github.com/wso2/product-cdm.git</connection>
-        <tag>v0.9.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
 
