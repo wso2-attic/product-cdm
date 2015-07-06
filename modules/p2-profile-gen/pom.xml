@@ -16,7 +16,8 @@
  ~ specific language governing permissions and limitations
  ~ under the License.
  -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>org.wso2.cdm</groupId>
         <artifactId>wso2cdm-parent</artifactId>
@@ -159,15 +160,18 @@
                                 <featureArtifactDef>
                                     org.wso2.carbon.commons:org.wso2.carbon.ndatasource.feature:${carbon.commons.version}
                                 </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.commons:org.wso2.carbon.ntask.core.feature:${carbon.commons.version}
+                                </featureArtifactDef>
                                 <!-- End of Carbon Commons Features -->
 
                                 <!-- Multitenancy Features -->
-                               <!-- <featureArtifactDef>
-                                    org.wso2.carbon.multitenancy:org.wso2.carbon.tenant.common.server.feature:${carbon.multitenancy.version}
-                                </featureArtifactDef>-->
+                                <!-- <featureArtifactDef>
+                                     org.wso2.carbon.multitenancy:org.wso2.carbon.tenant.common.server.feature:${carbon.multitenancy.version}
+                                 </featureArtifactDef>-->
                                 <!-- End of Multitenancy Features -->
 
-				<!-- Identity Features -->
+                                <!-- Identity Features -->
                                 <featureArtifactDef>
                                     org.wso2.carbon.identity:org.wso2.carbon.security.mgt.feature:${carbon.identity.version}
                                 </featureArtifactDef>
@@ -229,7 +233,7 @@
                                 </featureArtifactDef>
                                 <featureArtifactDef>
                                     org.wso2.carbon.identity:org.wso2.carbon.claim.mgt.feature:${carbon.identity.version}
-                                </featureArtifactDef>				
+                                </featureArtifactDef>
 
                                 <!-- Registry features -->
                                 <featureArtifactDef>
@@ -272,8 +276,8 @@
                                     org.wso2.carbon.governance:org.wso2.carbon.registry.extensions.feature:${carbon.governance.version}
                                 </featureArtifactDef>
 
-				<!-- API Management Features -->
-				<featureArtifactDef>
+                                <!-- API Management Features -->
+                                <featureArtifactDef>
                                     org.wso2.carbon.apimgt:org.wso2.carbon.apimgt.core.feature:${carbon.apimgt.version}
                                 </featureArtifactDef>
                                 <featureArtifactDef>
@@ -282,7 +286,7 @@
                                 <featureArtifactDef>
                                     org.wso2.carbon.apimgt:org.wso2.carbon.apimgt.store.feature:${carbon.apimgt.version}
                                 </featureArtifactDef>
-				<!-- End of API Management Features -->
+                                <!-- End of API Management Features -->
                             </featureArtifacts>
                         </configuration>
                     </execution>
@@ -382,7 +386,11 @@
                                     <id>org.wso2.carbon.ndatasource.feature.group</id>
                                     <version>${carbon.commons.version}</version>
                                 </feature>
-                                 <!--End of Carbon Commons Features-->
+                                <feature>
+                                    <id>org.wso2.carbon.ntask.core.feature.group</id>
+                                    <version>${carbon.commons.version}</version>
+                                </feature>
+                                <!--End of Carbon Commons Features-->
 
                                 <!-- Carbon Multitenancy Features -->
                                 <!--<feature>
@@ -391,7 +399,7 @@
                                 </feature>-->
                                 <!-- End of Carbon Multitenancy Features -->
 
-				<!-- Identity Features -->
+                                <!-- Identity Features -->
                                 <feature>
                                     <id>org.wso2.carbon.security.mgt.feature.group</id>
                                     <version>${carbon.identity.version}</version>
@@ -434,11 +442,15 @@
                                 </feature>
                                 <!-- SSO Features -->
                                 <feature>
-                                    <id>org.wso2.carbon.identity.application.authenticator.basicauth.server.feature.group</id>
+                                    <id>
+                                        org.wso2.carbon.identity.application.authenticator.basicauth.server.feature.group
+                                    </id>
                                     <version>${carbon.identity.version}</version>
                                 </feature>
                                 <feature>
-                                    <id>org.wso2.carbon.identity.application.authentication.framework.server.feature.group</id>
+                                    <id>
+                                        org.wso2.carbon.identity.application.authentication.framework.server.feature.group
+                                    </id>
                                     <version>${carbon.identity.version}</version>
                                 </feature>
                                 <feature>
@@ -530,7 +542,7 @@
                                 </feature>
                                 <!-- End of Governance Features -->
 
-				<!-- API Management Features -->
+                                <!-- API Management Features -->
                                 <feature>
                                     <id>org.wso2.carbon.apimgt.core.feature.group</id>
                                     <version>${carbon.apimgt.version}</version>
@@ -559,8 +571,9 @@
                         <phase>package</phase>
                         <configuration>
                             <tasks>
-                                <replace token="false" value="true" dir="target/wso2carbon-core-${carbon.kernel.version}/repository/components">
-                                    <include name="**/bundles.info" />
+                                <replace token="false" value="true"
+                                         dir="target/wso2carbon-core-${carbon.kernel.version}/repository/components">
+                                    <include name="**/bundles.info"/>
                                 </replace>
                             </tasks>
                         </configuration>
