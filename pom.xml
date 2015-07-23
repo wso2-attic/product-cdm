@@ -420,7 +420,7 @@
         <carbon.data.version>4.4.0</carbon.data.version>
 
         <!-- Carbon Commons -->
-        <carbon.commons.version>4.4.0</carbon.commons.version>
+        <carbon.commons.version>4.4.1</carbon.commons.version>
 
         <!-- Carbon Deployment -->
         <carbon.deployment.version>4.4.0</carbon.deployment.version>
