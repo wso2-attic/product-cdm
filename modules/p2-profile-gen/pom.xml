@@ -175,7 +175,7 @@
                                 <featureArtifactDef>
                                     org.wso2.carbon.multitenancy:org.wso2.carbon.tenant.common.server.feature:${carbon.multitenancy.version}
                                 </featureArtifactDef>
-                                <!-- End of Multitenancy Features -->
+                                <!-- End of Carbon Commons Features -->
 
                                 <!-- Identity Features -->
                                 <featureArtifactDef>
