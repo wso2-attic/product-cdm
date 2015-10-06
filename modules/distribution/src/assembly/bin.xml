@@ -20,7 +20,7 @@
                 <exclude>**/axis2services/version/**</exclude>
                 <exclude>**/pom.xml</exclude>
                 <exclude>**/version.txt</exclude>
-                <!--<exclude>**/axis2/axis2.xml</exclude>-->
+                <exclude>**/axis2/axis2.xml</exclude>
                 <exclude>**/master-datasources.xml</exclude>
                 <exclude>**/carbon.xml</exclude>
                 <exclude>**/database/WSO2DM_DB.h2.db</exclude>
@@ -115,7 +115,7 @@
             <directory>src/repository/conf</directory>
             <outputDirectory>wso2cdm-${pom.version}/repository/conf</outputDirectory>
             <includes>
-                <include>**/api-manager.xml</include>
+                <!--include>**/api-manager.xml</include-->
                 <include>**/sso-idp-config.xml</include>
                 <!-- <include>**/emm-config.xml</include>-->
             </includes>
@@ -219,7 +219,18 @@
         <!--</outputDirectory>-->
         <!--<fileMode>755</fileMode>-->
         <!--</fileSet>-->
-    </fileSets>
+	
+	<!-- Copying synapse-config directory -->
+        <fileSet>
+            <directory>src/repository/resources</directory>
+            <outputDirectory>${pom.artifactId}-${pom.version}/repository/deployment/server</outputDirectory>
+            <excludes>
+                <exclude>**/empty.txt</exclude>
+                <exclude>**/styles/**</exclude>
+            </excludes>
+        </fileSet> 
+
+   </fileSets>
 
     <dependencySets>
         <dependencySet>
@@ -370,12 +381,13 @@
                     <fileMode>644</fileMode>
                 </file>-->
 
-        <!--<file>
+	<!-- Copying axis2.xml -->
+        <file>
             <source>src/repository/conf/axis2/axis2.xml</source>
             <outputDirectory>wso2cdm-${pom.version}/repository/conf/axis2/</outputDirectory>
             <filtered>true</filtered>
             <fileMode>644</fileMode>
-        </file>-->
+        </file>
         <file>
             <source>src/repository/conf/application-authenticators.xml</source>
             <outputDirectory>wso2cdm-${pom.version}/repository/conf/security/</outputDirectory>
@@ -390,7 +402,7 @@
         </file>
         <file>
             <source>src/repository/conf/identity.xml</source>
-            <outputDirectory>wso2cdm-${pom.version}/repository/conf</outputDirectory>
+            <outputDirectory>wso2cdm-${pom.version}/repository/conf/identity</outputDirectory>
             <fileMode>644</fileMode>
         </file>
 
@@ -501,5 +513,28 @@
             <fileMode>644</fileMode>
         </file>
 
+	<!-- Copying governance.xml -->
+        <file>
+            <source>../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/governance.xml
+            </source>
+            <outputDirectory>${pom.artifactId}-${pom.version}/repository/conf</outputDirectory>
+            <fileMode>644</fileMode>
+        </file>
+
+	<!-- Copying api-manager.xml -->
+        <file>
+            <source>../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/api-manager.xml
+            </source>
+            <outputDirectory>${pom.artifactId}-${pom.version}/repository/conf</outputDirectory>
+            <fileMode>644</fileMode>
+        </file>
+
+	<!-- Copying app-management-config.xml -->
+	<file>
+            <source>../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/etc/app-management-config.xml
+            </source>
+            <outputDirectory>${pom.artifactId}-${pom.version}/repository/conf/etc</outputDirectory>
+            <fileMode>644</fileMode>
+        </file>
     </files>
 </assembly>
