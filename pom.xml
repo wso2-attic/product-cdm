@@ -448,7 +448,7 @@
         <cdm.version>1.0.0-SNAPSHOT</cdm.version>
 
         <!-- Carbon Mediation -->
-        <carbon.mediation.version>4.4.11-SNAPSHOT</carbon.mediation.version>
+        <carbon.mediation.version>4.4.11</carbon.mediation.version>
 
     </properties>
 
