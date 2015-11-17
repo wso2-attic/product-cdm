@@ -418,7 +418,7 @@
         <tomcat.jdbc.pooling.version>7.0.34.wso2v2</tomcat.jdbc.pooling.version>
 
         <!-- Carbon API Management -->
-        <carbon.apimgt.version>4.3.0-SNAPSHOT</carbon.apimgt.version>
+        <carbon.apimgt.version>4.3.0</carbon.apimgt.version>
 
         <!-- Carbon Data -->
         <carbon.data.version>4.4.0</carbon.data.version>
