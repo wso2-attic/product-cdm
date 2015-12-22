@@ -430,7 +430,7 @@
         <carbon.deployment.version>4.6.0</carbon.deployment.version>
 
         <!-- Carbon Identity -->
-        <carbon.identity.version>5.0.5</carbon.identity.version>
+        <carbon.identity.version>5.0.7</carbon.identity.version>
 
         <!-- Carbon Multi-tenancy -->
         <carbon.multitenancy.version>4.5.0</carbon.multitenancy.version>
@@ -442,7 +442,7 @@
         <carbon.governance.version>4.5.8</carbon.governance.version>
 
         <!-- Carbon Device Management -->
-        <carbon.device.mgt.version>0.9.2-SNAPSHOT</carbon.device.mgt.version>
+        <carbon.device.mgt.version>1.0.1-SNAPSHOT</carbon.device.mgt.version>
 
         <!-- CDM-Framework Version -->
         <cdm.version>1.0.0-SNAPSHOT</cdm.version>
